@@ -29,3 +29,9 @@ def generate_word(request):
         'times_clicked': request.session['times_clicked']
       }
       return redirect('/random_word', context)
+
+def reset(request):
+    if request.method == "POST":
+         request.session['random_word'] = ''
+         request.session['times_clicked'] = 0
+    return redirect('/random_word')
