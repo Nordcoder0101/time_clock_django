@@ -18,4 +18,5 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^', include('apps.show_time.urls')),
+    url(r'^random_word/', include('apps.random_word.urls')),
 ]
